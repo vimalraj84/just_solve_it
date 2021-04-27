@@ -1,7 +1,7 @@
 package com.bilqu.solve.prob;
 
 
-import com.bilqu.solve.prob.ds.util.ListNode;
+import com.bilqu.solve.ds.ListNode;
 
 public class PalindromeLinkedList {
     public static void main(String[] args) {

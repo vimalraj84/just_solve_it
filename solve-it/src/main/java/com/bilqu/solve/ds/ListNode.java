@@ -1,4 +1,4 @@
-package com.bilqu.solve.prob.ds.util;
+package com.bilqu.solve.ds;
 
 
 //Singly linked list

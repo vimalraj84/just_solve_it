@@ -1,6 +1,6 @@
 package com.bilqu.solve.prob.math;
 
-import com.bilqu.solve.prob.ds.util.ListNode;
+import com.bilqu.solve.ds.ListNode;
 
 public class AddTwoNumbers{
 
