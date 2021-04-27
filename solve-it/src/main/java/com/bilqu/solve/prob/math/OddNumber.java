@@ -1,4 +1,4 @@
-package com.bilqu.solve.prob;
+package com.bilqu.solve.prob.math;
 
 import java.util.stream.IntStream;
 
