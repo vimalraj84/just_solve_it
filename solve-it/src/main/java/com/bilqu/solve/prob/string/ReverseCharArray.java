@@ -1,4 +1,4 @@
-package com.bilqu.solve.prob;
+package com.bilqu.solve.prob.string;
 
 
 import java.util.Arrays;
