@@ -1,9 +1,4 @@
-<<<<<<< HEAD:solve-it/src/main/java/com/bilqu/solve/ds/util/ListNode.java
 package com.bilqu.solve.ds.util;
-=======
-package com.bilqu.solve.ds;
->>>>>>> c998b556a9b06264fda0478daaea467a0952d22c:solve-it/src/main/java/com/bilqu/solve/ds/ListNode.java
-
 
 //Singly linked list
 public class ListNode<T> {
