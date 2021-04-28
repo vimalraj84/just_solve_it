@@ -1,4 +1,4 @@
-package com.bilqu.solve.ds;
+package com.bilqu.solve.ds.util;
 
 public class TreeNode<T> {
     private T head;

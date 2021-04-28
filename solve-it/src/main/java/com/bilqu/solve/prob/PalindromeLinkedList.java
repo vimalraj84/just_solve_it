@@ -1,37 +1,40 @@
 package com.bilqu.solve.prob;
 
 
-import com.bilqu.solve.prob.ds.util.ListNode;
+import com.bilqu.solve.ds.util.ListNode;
 
 public class PalindromeLinkedList {
     public static void main(String[] args) {
 
-        ListNode<Integer> linkedList = new ListNode(1, new ListNode(2, new ListNode(2, new ListNode(1))));
-        System.out.println(linkedList);
-        System.out.print(isPalindrome(linkedList));
+        //1 -> 2 -> 3 -> 1 -> 2 -> 3 -> null
+        ListNode<Integer> linkedList = new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(3, new ListNode(2,new ListNode(1))))));
+        System.out.println(isPalindrome(linkedList));
     }
 
     private static boolean isPalindrome(ListNode<Integer> input){
+        System.out.println("INPUT:" + input);
 
         ListNode slow = input;
         ListNode fast = input;
 
         while( fast != null && fast.getNext() != null){
-            slow.setNext(input.getNext());
-            fast.setNext(input.getNext().getNext());
+            fast = fast.getNext().getNext();
+            slow = slow.getNext();
         }
 
+        System.out.println("before reverse : "+ slow);
         slow = reverse(slow);
         fast = input;
 
+        System.out.println("slow before compare : "+ slow);
+        System.out.println("fast before compare : "+ fast);
         while(slow != null){
             if(slow.getValue() != fast.getValue())
                 return false;
             slow = slow.getNext();
             fast = fast.getNext();
         }
-
-        return false;
+        return true;
     }
 
     private static ListNode<Integer> reverse(ListNode<Integer> input){

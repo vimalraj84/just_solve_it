@@ -4,8 +4,8 @@ package com.bilqu.solve.prob;
 //Height-balanced binary tree is defined as:
 //A binary tree in which the left and right subtrees of every node differ in height by no more than 1.
 
-import com.bilqu.solve.ds.TreeNode;
-import com.bilqu.solve.ds.TreePrinter;
+import com.bilqu.solve.ds.util.TreeNode;
+import com.bilqu.solve.ds.util.TreePrinter;
 
 public class BalancedBinaryTree {
 

@@ -1,4 +1,4 @@
-package com.bilqu.solve.ds;
+package com.bilqu.solve.ds.util;
 
 import java.util.ArrayList;
 import java.util.Collections;
