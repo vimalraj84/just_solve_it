@@ -12,23 +12,30 @@ public class NumberPalindrome {
 	}
 	
 	public static boolean isPalindrome(int ip) {
-		
-		int input = ip;
-		
-		if(input < 0 || (input % 10 == 0 && input != 0))
+
+		int i = ip;
+		System.out.println(ip);
+		if (ip == 0 || ip< 0 || ip%10 == 0) {
 			return false;
-		
-		int output = 0;
-		while(input >9){
-			output = output*10+input%10;
-			input = input/10;
 		}
-		output = output*10+input;
-		System.out.println("\nOutput : "+output);
-		if(ip == output)
-            return true;
-        else 
-            return false;
+
+		int reversed = 0;
+
+		while(ip > 9){
+			int pop = ip%10;
+			ip /= 10;
+			reversed = (reversed*10) + pop;
+		}
+
+		reversed = (reversed*10) + ip;
+
+		System.out.println(i);
+		System.out.println(reversed);
+		if (reversed == i) {
+			return true;
+		}else {
+			return false;
+		}
 	}
 	
 }

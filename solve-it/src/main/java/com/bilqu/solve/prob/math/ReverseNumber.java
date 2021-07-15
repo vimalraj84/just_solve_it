@@ -20,7 +20,6 @@ public class ReverseNumber {
 		output = output*10+input;
 		System.out.println("\nOutput : "+output);
 	}
-
 	public static void print8(int input){
 
 		if (input != 0){

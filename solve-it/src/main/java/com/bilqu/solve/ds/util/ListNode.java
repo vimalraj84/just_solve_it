@@ -2,8 +2,8 @@ package com.bilqu.solve.ds.util;
 
 //Singly linked list
 public class ListNode<T> {
-    private T value;
-    private ListNode<T> next;
+    public T value;
+    public ListNode<T> next;
     public ListNode(T value){
         this.value = value;
     }
