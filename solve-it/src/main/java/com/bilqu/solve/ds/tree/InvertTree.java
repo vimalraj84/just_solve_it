@@ -1,4 +1,4 @@
-package com.bilqu.solve.ds;
+package com.bilqu.solve.ds.tree;
 
 import com.bilqu.solve.ds.util.TreeNode;
 import com.bilqu.solve.ds.util.TreeNode_Int;

@@ -19,6 +19,7 @@ public class DeckOfCards {
         cardHold = -1;
 
         Arrays.stream(deck).forEach(i -> System.out.format("%s,",i));
+        System.out.println();
 
     }
 
@@ -32,6 +33,8 @@ public class DeckOfCards {
             deck[i] = temp;
             i++;
         }
+
+        Arrays.stream(deck).forEach(c -> System.out.format("%s,",c));
     }
 
     public Cards deal() {
@@ -61,7 +64,7 @@ public class DeckOfCards {
     public static void main(String[] args) {
         DeckOfCards deck2 = new DeckOfCards();
         deck2.Shuffle();
-        Arrays.stream(deck2.deck).forEach(i -> System.out.format("%s,",i));
+
 
         for (int i = 0; i < 52; i++)
             System.out.println(deck2.deal());

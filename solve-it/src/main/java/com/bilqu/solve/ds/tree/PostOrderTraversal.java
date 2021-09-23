@@ -1,14 +1,10 @@
-package com.bilqu.solve.ds;
-
-import com.bilqu.solve.ds.util.Stack;
+package com.bilqu.solve.ds.tree;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
-public class PreOrderTraversal {
-
+public class PostOrderTraversal {
 
     public static void main(String[] args) {
 
@@ -28,11 +24,13 @@ public class PreOrderTraversal {
         root.children = child;
 
         System.out.println(root); //1,[3,[5,null, 6,null], 2,null, 4,null]
-        System.out.println(preOrder(root));//[1,3,5,6,2,4]
+        System.out.println(postOrder(root));//[5,6,3,2,4,1]
+
 
     }
 
-    public static List<Integer> preOrder(Node root){
+    private static List<Integer> postOrder(Node root){
+
         LinkedList<Node> stack = new LinkedList<>();
         LinkedList<Integer> output = new LinkedList<>();
 
@@ -42,21 +40,21 @@ public class PreOrderTraversal {
 
         stack.add(root);
 
-        while(!stack.isEmpty()){
+        while (!stack.isEmpty()){
 
             Node node = stack.pollLast();
-            output.add(node.val);
+            output.addFirst(node.val);
 
             if(node.children != null && !node.children.isEmpty()){
-                Collections.reverse(node.children);
-                for(Node nd : node.children){
-                    stack.add(nd);
-                }
+               for(Node nd : node.children){
+                   stack.add(nd);
+               }
             }
         }
 
         return output;
     }
+
 
     //Node
     public static class Node{
